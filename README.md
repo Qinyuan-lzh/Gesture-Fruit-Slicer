@@ -1,50 +1,54 @@
-# Gesture Fruit Slicer - AI手势切水果 🍉
+# Gesture Fruit Slicer - AI Hand-Controlled Fruit Ninja 🍉
 
 
 
-本项目是一个使用 Python、OpenCV 和 `cvzone` 手部识别库开发的虚拟“切水果”游戏。
-
-你不需要鼠标或触摸屏，只需举起你的手，用**食指**在空中挥动，就能像武士一样切开飞来的水果！本项目从一个简单的原型开始，逐步迭代，加入了双模式、特殊道具、手势选关和隐藏彩蛋等丰富功能。
 
 
+This is a virtual "Fruit Slicer" game developed using Python, OpenCV, and the `cvzone` hand tracking library.
 
-## 🎮 核心功能 (创新点)
+No mouse or touchscreen required! Just raise your hand, wave your **index finger** in the air, and slice flying fruit like a samurai. This project evolved from a simple prototype, iteratively adding features like dual game modes, special power-ups, gesture-based menus, and hidden easter eggs.
 
 
 
-- **手势选关 (主菜单)**：无需键盘！在菜单界面，伸出 ✊ **拳头** 选择“无限模式”，或 🖐️ **手掌** 选择“倒计时模式”。
-- **食指切割**：用你的食指指尖 👆 作为刀光，在空中挥动即可切割。
-- **双游戏模式**：
-  - **无限模式**：不断挑战你的最高分，直到撞到炸弹。
-  - **倒计时模式**：在 60 秒内尽可能获得最高分。
-- **🍋 特殊“冰冻柠檬”**：切到柠檬时，所有物体将进入 3 秒的“子弹时间”，速度锐减，是你疯狂连击的最佳时机！
-- **💣 躲避炸弹**：切到炸弹？游戏立刻结束！
-- **隐藏重置彩蛋**：在游戏中或结束时，竖起**中指** 🖕 即可立即重置游戏，返回主菜单。
+## 🎮 Core Features & Innovations
 
-<img src="GestureFruitSlicer/image-20251111120737636.png" alt="image-20251111120737636" style="zoom:50%;" />
 
-## 🛠️ 运行环境
+
+- **Gesture-Based Menu**: No keyboard needed! On the menu screen, show a ✊ **Fist** to select "Infinite Mode" or a 🖐️ **Palm** for "Countdown Mode".
+- **Index Finger Slicing**: Your index fingertip 👆 is your blade.
+- **Dual Game Modes**:
+  - **Infinite Mode**: Challenge your high score until you hit a bomb.
+  - **Countdown Mode**: Score as much as you can in 60 seconds.
+- **🍋 Special "Freeze Lemon" FX**: Slicing a lemon triggers a 3-second "Bullet Time" effect, slowing all objects to a crawl—your perfect chance for a high-scoring combo!
+- **💣 Dodge Bombs**: Hit a bomb? Game over!
+- **Hidden Reset Easter Egg**: During the game or on the game over screen, show the **Middle Finger** 🖕 to instantly reset the game and return to the main menu.
+- **Smart Frame Cropping**: Automatically crops the camera's "pillarbox" (black bars), intelligently cutting the 16:9 (1280x720) source to a clean `960x576` frame for a fully immersive experience.
+- **Full Unicode Path Support**: Flawlessly loads asset files with non-ASCII characters (like `橙子.png`).
+
+
+
+## 🛠️ Tech Stack
 
 
 
 - Python 3.7+
 - opencv-python
 - cvzone
-- numpy (通常随 OpenCV 和 cvzone 自动安装)
+- numpy (usually installed with OpenCV/cvzone)
 
 
 
-## 🚀 如何开始
+## 🚀 Getting Started
 
 
 
-1. **下载项目文件**
+1. **Download the Project**
 
-   - 确保 `main.py` 和所有图片资源都在同一个文件夹中。
+   - Ensure `main.py` and all your image assets are in the same folder.
 
-2. **安装依赖**
+2. **Install Dependencies**
 
-   - 在你的终端或命令行中运行：
+   - In your terminal or command prompt, run:
 
    Bash
 
@@ -52,15 +56,15 @@
    pip install opencv-python cvzone
    ```
 
-3. **准备素材 (重要！)**
+3. **Prepare Assets (Crucial!)**
 
-   - 本项目需要以下图片文件（或你修改代码以匹配你的文件名）：
-   - **水果**: `orange.png`, `apple.png`, `pineapple.png`, `watermelon.png`, `banana.png`, `Lemon.png`, `durian.png`, `Mango.png`, `strawberry.png`
-   - **炸弹**: `bomb.png`
+   - This project requires the following image files (or you must edit `main.py` to match your filenames):
+   - **Fruits**: `orange.png`, `apple.png`, `pineapple.png`, `watermelon.png`, `banana.png`, `Lemon.png`, `durian.png`, `Mango.png`, `strawberry.png`
+   - **Bomb**: `bomb.png`
 
-4. **运行游戏**
+4. **Run the Game**
 
-   - 在终端中运行 `main.py`:
+   - In your terminal, run `main.py`:
 
    Bash
 
@@ -70,19 +74,23 @@
 
 
 
-## ✋ 游戏操控
+## ✋ Controls
 
 
 
-| **操作**            | **手势 / 按键** | **描述**                   |
-| ------------------- | --------------- | -------------------------- |
-| **切割**            | 食指指尖        | 你的“刀刃”                 |
-| **选无限模式**      | ✊ 拳头          | (菜单界面)                 |
-| **选倒计时模式**    | 🖐️ 手掌          | (菜单界面)                 |
-| **重置游戏**        | 🖕 中指          | (游戏中 / 结束时) 返回菜单 |
-| **重置游戏 (备用)** | `r` 键          | (游戏中 / 结束时) 返回菜单 |
-| **退出游戏**        | `q` 键          | 立即退出                   |
+| **Action**                | **Gesture / Key** | **Context**         |
+| ------------------------- | ----------------- | ------------------- |
+| **Slice**                 | Index Finger      | In-Game             |
+| **Select Infinite Mode**  | ✊ Fist            | Main Menu           |
+| **Select Countdown Mode** | 🖐️ Palm            | Main Menu           |
+| **Reset Game (Gesture)**  | 🖕 Middle Finger   | In-Game / Game Over |
+| **Reset Game (Keyboard)** | `r` key           | In-Game / Game Over |
+| **Quit Game**             | `q` key           | Always              |
 
-**致谢**
 
-- 本项目使用了 [cvzone](https://github.com/cvzone/cvzone) 库，极大地简化了手部追踪的实现。
+
+## Acknowledgements
+
+
+
+- This project heavily utilizes the [cvzone library](https://github.com/cvzone/cvzone) for its simple and effective hand tracking module.
