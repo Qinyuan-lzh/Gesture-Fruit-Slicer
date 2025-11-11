@@ -22,7 +22,7 @@
   - **🍋 Special "Freeze Lemon" FX**: Slicing a lemon triggers a 3-second "Bullet Time" effect, slowing all objects to a crawl—your perfect chance for a high-scoring combo!
   - **💣 Dodge Bombs**: Hit a bomb? Game over!
   - **Hidden Reset Easter Egg**: During the game or on the game over screen, show the **Middle Finger** 🖕 to instantly reset the game and return to the main menu.
-  - ![gamescreenshot ](GestureFruitSlicer/gamescreenshot .png)
+  - ![gamescreenshot ](GestureFruitSlicer/gamescreenshot.png)
 
   
 
